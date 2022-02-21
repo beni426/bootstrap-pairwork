@@ -11,17 +11,17 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :title %>
-    <%= form.text_field :title %>
+  <div class="field form-group">
+    <%= form.label :title ,class:'sr-only' %>
+    <%= form.text_field :title,class:'form-control',required:true,autofocus:true,placeholder:'title',minlength:3 %>
   </div>
 
-  <div class="field">
-    <%= form.label :content %>
-    <%= form.text_area :content %>
+  <div class="field form-group">
+    <%= form.label :content,class:'sr-only' %>
+    <%= form.text_area :content,class:'form-control',required:true,placeholder:'content' %>
   </div>
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit nil,class:'btn btn-primary' %>
   </div>
 <% end %>
